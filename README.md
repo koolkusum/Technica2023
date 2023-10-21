@@ -7,6 +7,5 @@ Social Media has a lot of influence on people today. In both positive and negati
 They say media is a direct reflection of society.
 
 But let's try to reverse the roles.
-<img src="https://media.tenor.com/8XNZFtwJxscAAAAC/reverse-card-uno.gif" alt = "Uno Reverse Card">
-
-Why don't we use social media to influence a sustatainable practices?
+<iframe src="https://giphy.com/embed/MYJT0jtwsBA9aGj0lQ" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/pudgypenguins-reverse-uno-card-MYJT0jtwsBA9aGj0lQ">via GIPHY</a></p>
+Why don't we use social media to influence sustainable practices?
