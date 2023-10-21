@@ -23,3 +23,30 @@ app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 app.use("/assets", express.static(path.join(__dirname, "public/assets")));
+
+
+//set up file storage
+//multer will let us upload images into mongo
+const storage = multer.diskStorage({
+    //saving file from wesbite locally 
+    destination: function (req, file, cb) {
+      cb(null, "public/assets");
+    },
+    filename: function (req, file, cb) {
+      cb(null, file.originalname);
+    },
+  });
+  const upload = multer({ storage });
+  
+// mongoose set up: ports set up
+const PORT = process.env.PORT || 6001;//6001 is a back up port number
+mongoose.connect(process.env.URL, {
+    useNewUrlParser:true,
+    useUnifiedTopology:true,
+})
+//after we connect to mongo we must set up the port
+.then(() => {
+    app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+})
+//the error caught is the specific error being displayed
+.catch((error) =>console(`${error} did not connect`));
