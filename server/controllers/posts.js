@@ -26,8 +26,7 @@ export const createPost = async (req, res) => {
     res.status(409).json({ message: err.message });
   }
 };
-
-/* READ */
+//return all posts
 export const getFeedPosts = async (req, res) => {
   try {
     const post = await Post.find();
@@ -37,38 +36,41 @@ export const getFeedPosts = async (req, res) => {
   }
 };
 
+//get a user post from a specific id
 export const getUserPosts = async (req, res) => {
   try {
     const { userId } = req.params;
     const post = await Post.find({ userId });
     res.status(200).json(post);
-  } catch (err) {
+  } catch (err) {//error catching
     res.status(404).json({ message: err.message });
   }
 };
 
-/* UPDATE */
+//if post is liked then update to unlike it
+//if it is not yet liked, then like it
 export const likePost = async (req, res) => {
   try {
     const { id } = req.params;
     const { userId } = req.body;
     const post = await Post.findById(id);
+    //grabbing if the ppost was liked by the uder
     const isLiked = post.likes.get(userId);
 
-    if (isLiked) {
+    if (isLiked) {//already liked
       post.likes.delete(userId);
-    } else {
+    } else {//liked by specifc user id
       post.likes.set(userId, true);
     }
 
     const updatedPost = await Post.findByIdAndUpdate(
-      id,
+      id,//shows all the people who liked a certain post
       { likes: post.likes },
       { new: true }
     );
-
+      //returned to frontend
     res.status(200).json(updatedPost);
-  } catch (err) {
+  } catch (err) {//error catching
     res.status(404).json({ message: err.message });
   }
 };
