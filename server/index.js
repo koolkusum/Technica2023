@@ -8,6 +8,9 @@ import helmet from "helmet";
 import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
+import authRoutes from "./routes/auth.js";
+import userRoutes from "./routes/users.js";
+import postRoutes from "./routes/posts.js";
 import { register } from "./controllers/auth.js";
 import { createPost } from "./controllers/posts.js";
 import { verifyToken } from "./middleware/auth.js"; //authenciation import
@@ -46,6 +49,13 @@ const storage = multer.diskStorage({
 //authorization is making sure someone is logged in to perform certain operations
 app.post("/auth/register", upload.single("picture"), register);//middleware function + controller (logic of the endpoint)
 app.post("/posts", verifyToken, upload.single("picture"), createPost);
+
+
+//routes
+//using our api endpoints
+app.use("/auth", authRoutes);
+app.use("/users", userRoutes);
+app.use("/posts", postRoutes);
 
 
 // mongoose set up: ports set up

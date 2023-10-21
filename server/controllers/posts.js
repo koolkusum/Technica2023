@@ -1,7 +1,7 @@
 import Post from "../models/Post.js";
 import User from "../models/User.js";
 
-/* CREATE */
+//when making a post it takes all these parameters
 export const createPost = async (req, res) => {
   try {
     const { userId, description, picturePath } = req.body;
@@ -14,9 +14,10 @@ export const createPost = async (req, res) => {
       description,
       userPicturePath: user.picturePath,
       picturePath,
-      likes: {},
-      comments: [],
+      likes: {},//no likes when first created
+      comments: [],//no comments when first created
     });
+    //wait for it to be saved
     await newPost.save();
 
     const post = await Post.find();

@@ -45,7 +45,9 @@ export const register = async (req, res) => {
     }
   };
   
-  /* LOGGING IN */
+  //login 
+  //takes two inputs of email and password
+  //we have to compare  the email and password to whats already in the database
   export const login = async (req, res) => {
     try {
       const { email, password } = req.body;
@@ -53,10 +55,14 @@ export const register = async (req, res) => {
       if (!user) return res.status(400).json({ msg: "User does not exist. " });
   
       const isMatch = await bcrypt.compare(password, user.password);
+      //not a match throw an error
       if (!isMatch) return res.status(400).json({ msg: "Invalid credentials. " });
-  
+        
+      //json token of the user
       const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
+      //delete so frontend doesnt get (security reasons)
       delete user.password;
+      //if success show the token
       res.status(200).json({ token, user });
     } catch (err) {
       res.status(500).json({ error: err.message });
