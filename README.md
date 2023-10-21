@@ -11,5 +11,6 @@ But let's try to reverse the roles.
 <img src="https://media.giphy.com/media/MYJT0jtwsBA9aGj0lQ/giphy.gif" width="300" height="300" alt="Uno Reverse">
 
 Why don't we use social media to influence sustainable practices?
+<img src="https://media.giphy.com/media/v2KbbLQoFjvICIPJxH/giphy.gif"  width="300" height="300" alt="Earth Rules">
 
 ### Weekly Sustainable Challenges
