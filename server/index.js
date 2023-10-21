@@ -8,6 +8,9 @@ import helmet from "helmet";
 import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
+import { register } from "./controllers/auth.js";
+import { createPost } from "./controllers/posts.js";
+import { verifyToken } from "./middleware/auth.js"; //authenciation import
 
 //configs
 
@@ -37,7 +40,14 @@ const storage = multer.diskStorage({
     },
   });
   const upload = multer({ storage });
-  
+
+//authentication and authorization
+//authentication is when u register
+//authorization is making sure someone is logged in to perform certain operations
+app.post("/auth/register", upload.single("picture"), register);//middleware function + controller (logic of the endpoint)
+app.post("/posts", verifyToken, upload.single("picture"), createPost);
+
+
 // mongoose set up: ports set up
 const PORT = process.env.PORT || 6001;//6001 is a back up port number
 mongoose.connect(process.env.URL, {
