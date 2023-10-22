@@ -29,7 +29,7 @@ To make being a good person, a consistent practice rather than a one-time thing.
 
 <img src="https://media.giphy.com/media/v2KbbLQoFjvICIPJxH/giphy.gif"  width="300" height="300" alt="Earth Rules">
 
-### Design Elements
+# Design Elements
 
 ## Dark Mode
 
@@ -50,10 +50,12 @@ Like a normal social media, you can like posts, comment, and add/remove friends!
 
 ![commentlikefriend](https://github.com/koolkusum/Technica2023/assets/55637805/b753109a-04f8-4df5-b346-65b0a6da5f5a)
 
-
 ## Making a Post
 
 It is super easy! Write a description and upload and image and boom! Your post is added to the database and uploaded onto the website.
 
 ![makingpost](https://github.com/koolkusum/Technica2023/assets/55637805/cf253bb1-e53e-49fc-a4f3-22ba1d043170)
 
+# See the Future
+
+Of course, within 24 hours I can't have the most perfect product but think about the vision and potential!
