@@ -11,6 +11,17 @@ But let's try to reverse the roles.
 <img src="https://media.giphy.com/media/MYJT0jtwsBA9aGj0lQ/giphy.gif" width="300" height="300" alt="Uno Reverse">
 
 Why don't we use social media to influence sustainable practices?
-<img src="https://media.giphy.com/media/v2KbbLQoFjvICIPJxH/giphy.gif"  width="300" height="300" alt="Earth Rules">
 
 ### Weekly Sustainable Challenges
+Every week there will be a new challenge that the members of social media to do something sustainable for the planet. 
+This includes:
+* Reduce, Reuse, Recycle
+* Modes of transportation
+* And other sustainable practices
+
+**The GOAL**
+
+To make being a good person, a consistent practice rather than a one-time thing. Becoming a sustainable person is something that takes time.
+
+
+<img src="https://media.giphy.com/media/v2KbbLQoFjvICIPJxH/giphy.gif"  width="300" height="300" alt="Earth Rules">
