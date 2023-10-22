@@ -14,7 +14,9 @@ import postRoutes from "./routes/posts.js";
 import { register } from "./controllers/auth.js";
 import { createPost } from "./controllers/posts.js";
 import { verifyToken } from "./middleware/auth.js"; //authenciation import
-
+import User from "./models/User.js";
+import Post from "./models/Post.js";
+import { users, posts } from "./data/index.js";
 //configs
 
 const __filename = fileURLToPath(import.meta.url);
@@ -60,13 +62,17 @@ app.use("/posts", postRoutes);
 
 // mongoose set up: ports set up
 const PORT = process.env.PORT || 6001;//6001 is a back up port number
-mongoose.connect(process.env.URL, {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser:true,
     useUnifiedTopology:true,
 })
 //after we connect to mongo we must set up the port
 .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+
+    //add sample data only once
+    //User.insertMany(users);
+    //Post.insertMany(posts);
 })
 //the error caught is the specific error being displayed
-.catch((error) =>console(`${error} did not connect`));
+.catch((error) =>console.log(`${error} did not connect`));

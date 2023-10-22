@@ -239,8 +239,8 @@ export const posts = [
     lastName: "Vowel",
     location: "Chicago, IL",
     description:
-      "Just a short description. I'm tired of typing. I'm going to play video games now.",
-    picturePath: "post5.jpeg",
+      "Before you judge, I had a family outing this weekend. You all know I had to recycle!",
+    picturePath: "bottlesr.jpg",
     userPicturePath: "p8.jpeg",
     likes: new Map([
       [userIds[1], true],
@@ -249,11 +249,9 @@ export const posts = [
       [userIds[7], true],
     ]),
     comments: [
-      "I lied again, one more random comment",
-      "Why am I doing this?",
-      "Man I'm bored",
-      "What should I do?",
-      "I'm going to play video games",
+      "Wow the variety!",
+      "Cling Clang Cling",
+      "I am surprised none of those bottles broke.",
     ],
   },
   {
@@ -263,8 +261,8 @@ export const posts = [
     lastName: "Dunn",
     location: "Washington, DC",
     description:
-      "Before you judge,",
-    picturePath: "post6.jpeg",
+      "I went to the textile recycling center to donate some clothes I do not wear anymore.",
+    picturePath: "textiler.jpg",
     userPicturePath: "p9.jpeg",
     likes: new Map([
       [userIds[1], true],
@@ -272,11 +270,10 @@ export const posts = [
     ]),
 
     comments: [
-      "Can I play video games now?",
-      "No let's actually study",
-      "Never mind, I'm going to play video games",
-      "Stop it.",
-      "Michael, stop it.",
+      "I didn't know this existed!",
+      "Wow so many clothes.",
+      "This is an amazing solution for clothes that cannot be donated.",
+      "So colorful!",
     ],
   },
 ];
