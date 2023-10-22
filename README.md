@@ -23,4 +23,5 @@ This includes:
 
 To make being a good person, a consistent practice rather than a one-time thing. Becoming a sustainable person is something that takes time.
 
+
 <img src="https://media.giphy.com/media/v2KbbLQoFjvICIPJxH/giphy.gif"  width="300" height="300" alt="Earth Rules">
