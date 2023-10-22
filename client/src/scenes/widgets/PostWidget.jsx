@@ -3,6 +3,8 @@ import {
     FavoriteBorderOutlined,
     FavoriteOutlined,
     ShareOutlined,
+    Spa,
+    Park,
   } from "@mui/icons-material";
   import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
   import FlexBetween from "components/FlexBetween";
@@ -72,9 +74,9 @@ import {
             <FlexBetween gap="0.3rem">
               <IconButton onClick={patchLike}>
                 {isLiked ? (
-                  <FavoriteOutlined sx={{ color: primary }} />
+                  <Park sx={{ color: primary }} />
                 ) : (
-                  <FavoriteBorderOutlined />
+                  <Spa />
                 )}
               </IconButton>
               <Typography>{likeCount}</Typography>

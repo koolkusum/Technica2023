@@ -19,8 +19,7 @@ import {
     const token = useSelector((state) => state.token);
     const dark = palette.neutral.dark;
     const medium = palette.neutral.medium;
-    const main = palette.neutral.main;
-  
+    const main = palette.neutral.main;  
     const getUser = async () => {
       const response = await fetch(`http://localhost:3001/users/${userId}`, {
         method: "GET",
@@ -82,10 +81,19 @@ import {
   
         {/* SECOND ROW */}
         <Box p="1rem 0">
-          <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
-            <LocationOnOutlined fontSize="large" sx={{ color: main }} />
-            <Typography color={medium}>{location}</Typography>
-          </Box>
+
+        <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
+    <Box>
+      <LocationOnOutlined fontSize="large" sx={{ color: main }} />
+      <Typography color={medium}>{location}</Typography>
+    </Box>
+  </Box>
+
+  <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
+    <Box>
+      <img src="../assets/map.png" alt="map" style={{ maxWidth: '200px', borderRadius: '10px' }} />
+    </Box>
+  </Box>
           <Box display="flex" alignItems="center" gap="1rem">
             <WorkOutlineOutlined fontSize="large" sx={{ color: main }} />
             <Typography color={medium}>{occupation}</Typography>
@@ -102,11 +110,16 @@ import {
               {viewedProfile}
             </Typography>
           </FlexBetween>
-          <FlexBetween>
+          <FlexBetween mb ="0.5rem">
             <Typography color={medium}>Impressions of your post</Typography>
             <Typography color={main} fontWeight="500">
               {impressions}
             </Typography>
+          </FlexBetween>
+          <FlexBetween>
+            <Typography color={medium}>Challenges won</Typography>
+            <Typography color={main} fontWeight="500">
+            { Math.floor(Math.random() * 11)}            </Typography>
           </FlexBetween>
         </Box>
   
@@ -122,11 +135,15 @@ import {
             <FlexBetween gap="1rem">
               <img src="../assets/twitter.png" alt="twitter" />
               <Box>
+              <a href="https://twitter.com/" target="_blank" rel="noreferrer">
+
                 <Typography color={main} fontWeight="500">
-                  Twitter
+                  X
                 </Typography>
+                </a>
                 <Typography color={medium}>Social Network</Typography>
               </Box>
+ 
             </FlexBetween>
             <EditOutlined sx={{ color: main }} />
           </FlexBetween>
@@ -135,9 +152,11 @@ import {
             <FlexBetween gap="1rem">
               <img src="../assets/linkedin.png" alt="linkedin" />
               <Box>
+              <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
                 <Typography color={main} fontWeight="500">
                   Linkedin
                 </Typography>
+                </a>
                 <Typography color={medium}>Network Platform</Typography>
               </Box>
             </FlexBetween>

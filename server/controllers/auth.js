@@ -33,8 +33,8 @@ export const register = async (req, res) => {
         location,
         occupation,
         //we randomize it for not so it doesnt have just 0s
-        viewedProfile: Math.floor(Math.random() * 10000),
-        impressions: Math.floor(Math.random() * 10000),
+        viewedProfile: 0,
+        impressions: 0,
       });
       //storing in session
       const savedUser = await newUser.save();

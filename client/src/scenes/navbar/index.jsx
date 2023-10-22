@@ -20,6 +20,7 @@ import {
   Menu,
   Close,
 } from "@mui/icons-material";
+import PublicIcon from '@mui/icons-material/Public';
 import { useDispatch, useSelector } from "react-redux";
 import { setMode, setLogout } from "state";
 import { useNavigate } from "react-router-dom";
@@ -44,6 +45,7 @@ const Navbar = () => {
   return (
     <FlexBetween padding="1rem 6%" backgroundColor={alt}>
       <FlexBetween gap="1.75rem">
+      <PublicIcon sx={{ fontSize: "3.5rem", color: {primaryLight} }} />
         <Typography
           fontWeight="bold"
           fontSize="clamp(1rem, 2rem, 2.25rem)"
