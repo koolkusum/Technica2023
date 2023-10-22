@@ -56,7 +56,7 @@ const Navbar = () => {
             },
           }}
         >
-          Sociopedia
+          Your Green Planet
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween
