@@ -15,9 +15,9 @@ Why don't we use social media to influence sustainable practices?
 ### Weekly Sustainable Challenges
 Every week there will be a new challenge that the members of social media to do something sustainable for the planet. 
 This includes:
-*Reduce, Reuse, Recycle
-*Modes of transportation
-*And other sustainable practices
+* Reduce, Reuse, Recycle
+* Modes of transportation
+* And other sustainable practices
 
 **The GOAL**
 
